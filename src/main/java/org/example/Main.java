@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.beans.Expression;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -24,8 +26,7 @@ public class Main {
         WebElement button = driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']"));
         System.out.println(button.getText());
         button.click();
-
-//        Thread.sleep(5000);
+        Thread.sleep(5000);
 //        WebElement proTime = driver.findElement(By.xpath("//div[@class='orangehrm-attendance-card-profile']"));
 //        System.out.println(proTime.getText());
 //        proTime.getText();
@@ -84,16 +85,16 @@ public class Main {
 //        WebElement btn = driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--large oxd-button--secondary orangehrm-admin-access-button']"));
 //        System.out.println(btn.getText());
 //        btn.click();
-
-        Thread.sleep(5000);
-        WebElement buzz = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']/span[text()='Buzz']"));
-        System.out.println(buzz.getText());
-        buzz.click();
-
-        Thread.sleep(5000);
-        WebElement dashboard = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']/span[text()='Dashboard']"));
-        System.out.println(dashboard.getText());
-        dashboard.click();
+//
+//        Thread.sleep(5000);
+//        WebElement buzz = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']/span[text()='Buzz']"));
+//        System.out.println(buzz.getText());
+//        buzz.click();
+//
+//        Thread.sleep(5000);
+//        WebElement dashboard = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']/span[text()='Dashboard']"));
+//        System.out.println(dashboard.getText());
+//        dashboard.click();
 
 //        Thread.sleep(5000);
 //        WebElement request = driver.findElement(By.xpath("//p[text()=' (11) Leave Requests to Approve']"));
@@ -110,14 +111,14 @@ public class Main {
 //
 //        Thread.sleep(5000);
 //        driver.navigate().back();
-
-        Thread.sleep(5000);
-        WebElement pending = driver.findElement(By.xpath("//p[text()='(1) Pending Self Review']"));
-        System.out.println(pending.getText());
-        pending.click();
-
-        Thread.sleep(5000);
-        driver.navigate().back();
+//
+//        Thread.sleep(5000);
+//        WebElement pending = driver.findElement(By.xpath("//p[text()='(1) Pending Self Review']"));
+//        System.out.println(pending.getText());
+//        pending.click();
+//
+//        Thread.sleep(5000);
+//        driver.navigate().back();
 
 //        Thread.sleep(5000);
 //        WebElement candidate = driver.findElement(By.xpath("//p[text()='(1) Candidate to Interview']"));
@@ -127,58 +128,125 @@ public class Main {
 //        Thread.sleep(5000);
 //        driver.navigate().back();
 
-
-        Thread.sleep(10000);
-        WebElement assignleave = driver.findElement(By.xpath("//p[text()='Assign Leave']"));
-        System.out.println(assignleave.getText());
-        assignleave.click();
-
-        Thread.sleep(10000);
-        driver.navigate().back();
+//
+//        Thread.sleep(10000);
+//        WebElement assignleave = driver.findElement(By.xpath("//p[text()='Assign Leave']"));
+//        System.out.println(assignleave.getText());
+//        assignleave.click();
+//
+//        Thread.sleep(10000);
+//        driver.navigate().back();
 //        Thread.sleep(5000);
 //        WebElement dashboard = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']/span[text()='Dashboard']"));
 //        System.out.println(dashboard.getText());
 //        dashboard.click();
 
-        Thread.sleep(10000);
-        WebElement leavelist = driver.findElement(By.xpath("//p[text()='Leave List']"));
-        System.out.println(leavelist.getText());
-        leavelist.click();
+//        Thread.sleep(10000);
+//        WebElement leavelist = driver.findElement(By.xpath("//p[text()='Leave List']"));
+//        System.out.println(leavelist.getText());
+//        leavelist.click();
+//
+//        Thread.sleep(5000);
+//        driver.navigate().back();
+//
+//        Thread.sleep(5000);
+//        WebElement timesheets = driver.findElement(By.xpath("//p[text()='Timesheets']"));
+//        System.out.println(timesheets.getText());
+//        timesheets.click();
+//
+//        Thread.sleep(5000);
+//        driver.navigate().back();
+//
+//        Thread.sleep(5000);
+//        WebElement applyleave = driver.findElement(By.xpath("//p[text()='Apply Leave']"));
+//        System.out.println(applyleave.getText());
+//        applyleave.click();
+//
+//        Thread.sleep(5000);
+//        driver.navigate().back();
+//
+//        Thread.sleep(5000);
+//        WebElement myleave = driver.findElement(By.xpath("//p[text()='My Leave']"));
+//        System.out.println(myleave.getText());
+//        myleave.click();
+//
+//        Thread.sleep(5000);
+//        driver.navigate().back();
+//
+//        Thread.sleep(5000);
+//        WebElement mytimesheet = driver.findElement(By.xpath("//p[text()='My Timesheets']"));
+//        System.out.println(mytimesheet.getText());
+//        mytimesheet.click();
+//
+//        Thread.sleep(5000);
+//        driver.navigate().back();
+        WebElement myInfo = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']/span[text()='My Info']"));
+        System.out.println(myInfo.getText());
+        myInfo.click();
+
+//        Thread.sleep(5000);
+//        WebElement licenseDate = driver.findElement(By.xpath("//div[@class = \"oxd-date-wrapper\"]"));
+//        System.out.println(licenseDate.getText());
+//        licenseDate.click();
+//        Thread.sleep(5000);
+//        WebElement sex = driver.findElement(By.xpath("//input[@value=\"1\"]"));
+//        System.out.println(sex.getText());
+//        sex.click();
+
 
         Thread.sleep(5000);
-        driver.navigate().back();
+        WebElement contactDetails = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Contact Details\"]"));
+        System.out.println(contactDetails.getText());
+        contactDetails.click();
 
         Thread.sleep(5000);
-        WebElement timesheets = driver.findElement(By.xpath("//p[text()='Timesheets']"));
-        System.out.println(timesheets.getText());
-        timesheets.click();
+        WebElement saveContactDetail = driver.findElement(By.xpath("//button[@class=\"oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space\"]"));
+        System.out.println(saveContactDetail.getText());
+        saveContactDetail.click();
 
         Thread.sleep(5000);
-        driver.navigate().back();
+        WebElement emergencyContacts = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Emergency Contacts\"]"));
+        System.out.println(emergencyContacts.getText());
+        emergencyContacts.click();
 
         Thread.sleep(5000);
-        WebElement applyleave = driver.findElement(By.xpath("//p[text()='Apply Leave']"));
-        System.out.println(applyleave.getText());
-        applyleave.click();
+        WebElement dependents = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Dependents\"]"));
+        System.out.println(dependents.getText());
+        dependents.click();
 
         Thread.sleep(5000);
-        driver.navigate().back();
+        WebElement immigration = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Immigration\"]"));
+        System.out.println(immigration.getText());
+        immigration.click();
 
         Thread.sleep(5000);
-        WebElement myleave = driver.findElement(By.xpath("//p[text()='My Leave']"));
-        System.out.println(myleave.getText());
-        myleave.click();
+        WebElement job = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Job\"]"));
+        System.out.println(job.getText());
+        job.click();
 
         Thread.sleep(5000);
-        driver.navigate().back();
+        WebElement salary = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Salary\"]"));
+        System.out.println(salary.getText());
+        salary.click();
 
         Thread.sleep(5000);
-        WebElement mytimesheet = driver.findElement(By.xpath("//p[text()='My Timesheets']"));
-        System.out.println(mytimesheet.getText());
-        mytimesheet.click();
+        WebElement taxExemptions = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Tax Exemptions\"]"));
+        System.out.println(taxExemptions.getText());
+        taxExemptions.click();
 
         Thread.sleep(5000);
-        driver.navigate().back();
+        WebElement reportTo = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Report-to\"]"));
+        System.out.println(reportTo.getText());
+        reportTo.click();
 
+        Thread.sleep(5000);
+        WebElement quality = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Qualifications\"]"));
+        System.out.println(quality.getText());
+        quality.click();
+
+        Thread.sleep(5000);
+        WebElement member = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Memberships\"]"));
+        System.out.println(member.getText());
+        member.click();
     }
 }
