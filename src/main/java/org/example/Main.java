@@ -3,12 +3,17 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.beans.Expression;
+import java.time.Duration;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+    public static   ChromeDriver driver = new ChromeDriver();
+    public static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
     public static void main(String[] args) throws InterruptedException {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
@@ -248,5 +253,12 @@ public class Main {
         WebElement member = driver.findElement(By.xpath("//a[@class=\"orangehrm-tabs-item\"][text()=\"Memberships\"]"));
         System.out.println(member.getText());
         member.click();
+    }
+
+    public static void click(String xpath){
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpath)));
+        var element = driver.findElement(By.xpath(xpath));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
     }
 }
